@@ -1,61 +1,97 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jana's Links</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JANA // AIML</title>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        primary: "#c9c6c5",
+        accent: "#00dbe9",
+        bg: "#121414"
+      }
+    }
+  }
+}
+</script>
 
-  <!-- Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Space+Grotesk&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-background text-on-background flex flex-col items-center justify-center min-h-screen">
+<body class="bg-bg text-white">
 
-<!-- GRID BACKGROUND -->
 <div class="grid-bg"></div>
 
-<main class="container">
+<main class="main">
 
-  <!-- PROFILE -->
-  <header class="profile">
-    <div class="avatar-wrap">
-      <div class="glow"></div>
-      <img src="https://rronjqymokxfprqraeoi.supabase.co/storage/v1/object/public/Images/me.png"/>
-    </div>
-
-    <h1>JNYANANJAN SARKAR</h1>
-    <p>SYSTEM_ARCHITECT // AIML</p>
-  </header>
-
-  <!-- LINKS -->
-  <nav class="links">
-    <a href="#" class="card">CORE_PORTFOLIO <span>COMMING_SOON</span></a>
-    <a href="https://techypad.in" class="card offset1">TechyPad<span>STARTUP</span></a>
-    <a href="https://www.instagram.com/jana_sarkar_0/" class="card offset2">INSTAGRAM_ME<span>FOLLOW_NOW</span></a>
-    <a href="https://www.instagram.com/techy_pad/" class="card offset3">INSTAGRAM_STARTUP<span>FOLLOW_FOR_UPDATES</span></a>
-  </nav>
-
-  <!-- SOCIAL -->
-  <div class="social">
-    <span class="material-symbols-outlined">code</span>
-    <span class="material-symbols-outlined">work</span>
-    <span class="material-symbols-outlined">forum</span>
-    <span class="material-symbols-outlined">mail</span>
+<!-- PROFILE -->
+<header class="profile">
+  <div class="avatar-wrap">
+    <div class="glow"></div>
+    <img src="https://rronjqymokxfprqraeoi.supabase.co/storage/v1/object/public/Images/me.png"/>
   </div>
+
+  <h1>Jnyananjan Sarkar</h1>
+  <p>SYSTEM_ARCHITECT // AIML</p>
+</header>
+
+<!-- LINKS -->
+<nav class="links">
+
+<a href="#" class="card">
+  CORE_PORTFOLIO <span>COMING_SOON</span>
+</a>
+
+<a href="https://techypad.in" target="_blank" class="card offset1">
+  TECHYPAD <span>STARTUP</span>
+</a>
+
+<a href="https://github.com/Jnyananjan" target="_blank" class="card offset2">
+  GITHUB <span>CODE</span>
+</a>
+
+<a href="https://www.instagram.com/jana_sarkar_0/" target="_blank" class="card offset3">
+  INSTAGRAM <span>PERSONAL</span>
+</a>
+
+<a href="https://www.instagram.com/techy_pad/" target="_blank" class="card offset1">
+  TECHYPAD_IG <span>BRAND</span>
+</a>
+
+<a href="https://x.com/techy_pad" target="_blank" class="card offset2">
+  X / TWITTER <span>UPDATES</span>
+</a>
+
+<a href="https://discord.com/invite/Q6DdEXugdn" target="_blank" class="card offset3">
+  DISCORD <span>JOIN</span>
+</a>
+
+<a href="mailto:jnyananjansarkar01@gmail.com" class="card">
+  EMAIL <span>CONTACT</span>
+</a>
+
+</nav>
 
 </main>
 
-<footer>
-  <p>© 2026 LINK_INTERFACE</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 JANA // ALL_SYSTEMS_OPERATIONAL</p>
+
+  <div class="footer-links">
+    <a href="https://github.com/Jnyananjan" target="_blank">GitHub</a>
+    <a href="mailto:jnyananjansarkar01@gmail.com">Email</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
