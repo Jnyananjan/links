@@ -1,7 +1,5 @@
-// Mobile tap feedback vibration (optional cool touch)
-
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', () => {
-    if (navigator.vibrate) navigator.vibrate(10);
+document.querySelectorAll('.link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navigator.vibrate) navigator.vibrate(8);
   });
 });
