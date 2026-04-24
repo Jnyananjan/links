@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JANA - SYSTEM_ARCHITECT // AIML</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#00dbe9",
+                        "surface": "#121414",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-container": "#1e2020",
+                        "surface-container-low": "#1a1c1c",
+                        "on-secondary": "#00363a",
+                        "outline": "#8e9192",
+                        "surface-dim": "#121414",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#002022",
+                        "on-tertiary": "#520071",
+                        "on-primary-fixed-variant": "#474646",
+                        "on-secondary-container": "#00686f",
+                        "surface-variant": "#333535",
+                        "surface-bright": "#37393a",
+                        "secondary": "#d3fbff",
+                        "on-surface": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "inverse-primary": "#5f5e5e",
+                        "on-background": "#e2e2e2",
+                        "surface-tint": "#c9c6c5",
+                        "primary-container": "#050505",
+                        "tertiary-fixed-dim": "#ecb2ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#282a2b",
+                        "on-tertiary-fixed": "#320047",
+                        "on-primary": "#313030",
+                        "on-surface-variant": "#c4c7c7",
+                        "inverse-on-surface": "#2f3131",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-container": "#0e0017",
+                        "primary": "#c9c6c5",
+                        "secondary-fixed": "#7df4ff",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary-container": "#797777",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#333535",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "background": "#121414",
+                        "outline-variant": "#444748",
+                        "tertiary": "#ecb2ff",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "tertiary-fixed": "#f8d8ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#be10ff",
+                        "on-tertiary-fixed-variant": "#74009f",
+                        "secondary-container": "#00eefc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "shard-offset-md": "4rem",
+                        "shard-offset-lg": "8rem",
+                        "gap-shimmer": "2px",
+                        "shard-offset-sm": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Space Grotesk"],
+                        "data-mono": ["Space Grotesk"],
+                        "headline-xl": ["Newsreader"],
+                        "headline-lg": ["Newsreader"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "160%", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "data-mono": ["12px", {"lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "300"}],
+                        "headline-xl": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "300"}],
+                        "headline-lg": ["48px", {"lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .shard-bg {
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(0, 219, 233, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(236, 178, 255, 0.05) 0%, transparent 40%);
+        }
+        .shard-clip {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center justify-center relative overflow-hidden shard-bg">
+<!-- Ambient Grid/Noise -->
+<div class="absolute inset-0 pointer-events-none" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.2;"></div>
+<!-- Main Container -->
+<main class="relative z-10 w-full max-w-md px-6 py-12 flex flex-col items-center justify-center gap-12 min-h-screen">
+<!-- Profile Header -->
+<header class="flex flex-col items-center text-center gap-6 transform transition-all duration-700 hover:scale-105">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-secondary-fixed-dim to-tertiary-fixed-dim rounded-full blur opacity-30 group-hover:opacity-70 transition duration-1000 group-hover:duration-200"></div>
+<img alt="Profile Avatar" class="relative w-32 h-32 rounded-full border border-white/20 object-cover z-10 p-1 bg-surface-container" data-alt="Futuristic cyborg woman profile portrait, dark ambient lighting with subtle cyan and purple rim light reflections, cinematic high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAM6yGy1ui1m4IhRHqZU9Z8qucTiE9vfqJPKIMpskcYBM4IHVFAE_9wqu-4FU1EAUqh6smRY8GEwGBeWiOh4wuFhhxexwz7kCHuyRcvD5gMFNtzr5-C5rZ1h8NNCfj9KBAlbkPsm94WidnXD9DzpVwt11Ih56v7scf4X8CuImK4usCylpfrsS540GVnd0bDYhnd6kxZmnCcYVVW5c-tmIFfA0pIY-ZCDkQBjldq7FICzdZA-75el132C2RtG42MQ15T-Ly5w8WBNw"/>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="font-headline-lg text-headline-lg text-primary italic drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">JANA</h1>
+<p class="font-data-mono text-data-mono text-secondary-fixed-dim tracking-[0.3em] uppercase">SYSTEM_ARCHITECT // AIML</p>
+</div>
+</header>
+<!-- Link Shards -->
+<nav class="w-full flex flex-col gap-4">
+<!-- Shard 1 -->
+<a class="group relative w-full shard-clip backdrop-blur-xl bg-white/5 border border-white/10 p-4 flex items-center justify-between transition-all duration-500 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,219,233,0.15)]" href="#">
+<div class="absolute inset-0 bg-gradient-to-r from-secondary-fixed-dim/0 via-secondary-fixed-dim/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex items-center gap-4 relative z-10">
+<span class="material-symbols-outlined text-secondary-fixed-dim font-light" data-icon="terminal">terminal</span>
+<span class="font-data-mono text-data-mono text-on-surface group-hover:text-white transition-colors">CORE_PORTFOLIO</span>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="font-data-mono text-[10px] text-zinc-500">SYS_OK</span>
+<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
+</div>
+</a>
+<!-- Shard 2 -->
+<a class="group relative w-full shard-clip backdrop-blur-xl bg-white/5 border border-white/10 p-4 flex items-center justify-between transition-all duration-500 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(236,178,255,0.15)] translate-x-2" href="#">
+<div class="absolute inset-0 bg-gradient-to-r from-tertiary-fixed-dim/0 via-tertiary-fixed-dim/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex items-center gap-4 relative z-10">
+<span class="material-symbols-outlined text-tertiary-fixed-dim font-light" data-icon="science">science</span>
+<span class="font-data-mono text-data-mono text-on-surface group-hover:text-white transition-colors">NEURAL_LAB</span>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="font-data-mono text-[10px] text-zinc-500">SYNCING</span>
+<div class="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.8)] animate-pulse"></div>
+</div>
+</a>
+<!-- Shard 3 -->
+<a class="group relative w-full shard-clip backdrop-blur-xl bg-white/5 border border-white/10 p-4 flex items-center justify-between transition-all duration-500 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(201,198,197,0.15)] -translate-x-1" href="#">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex items-center gap-4 relative z-10">
+<span class="material-symbols-outlined text-primary font-light" data-icon="memory">memory</span>
+<span class="font-data-mono text-data-mono text-on-surface group-hover:text-white transition-colors">HARDWARE_SPECS</span>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="font-data-mono text-[10px] text-zinc-500">IDLE</span>
+<div class="w-2 h-2 rounded-full bg-zinc-600"></div>
+</div>
+</a>
+<!-- Shard 4 -->
+<a class="group relative w-full shard-clip backdrop-blur-xl bg-white/5 border border-white/10 p-4 flex items-center justify-between transition-all duration-500 hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,219,233,0.15)] translate-x-4" href="#">
+<div class="absolute inset-0 bg-gradient-to-r from-secondary-fixed-dim/0 via-secondary-fixed-dim/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex items-center gap-4 relative z-10">
+<span class="material-symbols-outlined text-secondary-fixed-dim font-light" data-icon="cable">cable</span>
+<span class="font-data-mono text-data-mono text-on-surface group-hover:text-white transition-colors">CONNECT_SERIAL</span>
+</div>
+<div class="flex items-center gap-2 relative z-10">
+<span class="font-data-mono text-[10px] text-zinc-500">ACTIVE</span>
+<div class="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></div>
+</div>
+</a>
+</nav>
+<!-- Social Pads -->
+<div class="flex justify-center gap-6 mt-8">
+<a class="w-12 h-12 flex items-center justify-center border border-white/10 bg-white/5 shard-clip backdrop-blur-md hover:bg-white/10 hover:border-secondary-fixed-dim/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-fixed-dim" data-icon="code">code</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center border border-white/10 bg-white/5 shard-clip backdrop-blur-md hover:bg-white/10 hover:border-secondary-fixed-dim/50 transition-all duration-300 group translate-y-2" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-fixed-dim" data-icon="work">work</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center border border-white/10 bg-white/5 shard-clip backdrop-blur-md hover:bg-white/10 hover:border-tertiary-fixed-dim/50 transition-all duration-300 group" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary-fixed-dim" data-icon="forum">forum</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center border border-white/10 bg-white/5 shard-clip backdrop-blur-md hover:bg-white/10 hover:border-tertiary-fixed-dim/50 transition-all duration-300 group -translate-y-2" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-tertiary-fixed-dim" data-icon="mail">mail</span>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-6 mt-auto bg-black/40 text-zinc-500 font-mono text-[8px] tracking-tighter uppercase text-zinc-600 border-t border-white/5 flex flex-col items-center justify-center gap-2 px-10 text-center relative z-20 backdrop-blur-md">
+<p>© 2024 NEURAL_LINK_INTERFACE. ALL_SYSTEMS_OPERATIONAL.</p>
+<div class="flex gap-4 opacity-60">
+<span>Uptime: 99.9%</span>
+<span>Latency: 14ms</span>
+<span>Kernel: v.8.2</span>
+</div>
+</footer>
+</body></html>
