@@ -1,98 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JANA // AIML</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        primary: "#c9c6c5",
-        accent: "#00dbe9",
-        bg: "#121414"
-      }
-    }
-  }
-}
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Space+Grotesk&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-bg text-white">
+<body>
 
-<div class="grid-bg"></div>
-
-<main class="main">
+<main class="container">
 
 <!-- PROFILE -->
-<header class="profile">
-  <div class="avatar-wrap">
-    <div class="glow"></div>
-    <img src="https://rronjqymokxfprqraeoi.supabase.co/storage/v1/object/public/Images/me.png"/>
+<div class="profile">
+  <div class="avatar">
+    <img src="https://rronjqymokxfprqraeoi.supabase.co/storage/v1/object/public/Images/me.png">
   </div>
 
-  <h1>Jnyananjan Sarkar</h1>
+  <h1>JANA</h1>
   <p>SYSTEM_ARCHITECT // AIML</p>
-</header>
+</div>
 
 <!-- LINKS -->
-<nav class="links">
+<div class="links">
 
-<a href="#" class="card">
-  CORE_PORTFOLIO <span>COMING_SOON</span>
+<a href="#" class="link">
+  <div class="left">
+    <!-- terminal -->
+    <svg viewBox="0 0 24 24"><path d="M4 17l6-5-6-5v10zm8 0h8v-2h-8v2z"/></svg>
+    CORE PORTFOLIO
+  </div>
+  <span>COMING</span>
 </a>
 
-<a href="https://techypad.in" target="_blank" class="card offset1">
-  TECHYPAD <span>STARTUP</span>
+<a href="https://techypad.in" target="_blank" class="link">
+  <div class="left">
+    <!-- rocket -->
+    <svg viewBox="0 0 24 24"><path d="M12 2c4 0 7 3 7 7 0 6-7 13-7 13S5 15 5 9c0-4 3-7 7-7z"/></svg>
+    TECHYPAD
+  </div>
+  <span>STARTUP</span>
 </a>
 
-<a href="https://github.com/Jnyananjan" target="_blank" class="card offset2">
-  GITHUB <span>CODE</span>
+<a href="https://github.com/Jnyananjan" target="_blank" class="link">
+  <div class="left">
+    <!-- code -->
+    <svg viewBox="0 0 24 24"><path d="M8 17l-5-5 5-5v10zm8-10l5 5-5 5V7z"/></svg>
+    GITHUB
+  </div>
+  <span>PROJECTS</span>
 </a>
 
-<a href="https://www.instagram.com/jana_sarkar_0/" target="_blank" class="card offset3">
-  INSTAGRAM <span>PERSONAL</span>
+<a href="https://www.instagram.com/jana_sarkar_0/" target="_blank" class="link">
+  <div class="left">
+    <!-- camera -->
+    <svg viewBox="0 0 24 24"><path d="M12 5a7 7 0 100 14 7 7 0 000-14z"/></svg>
+    INSTAGRAM
+  </div>
+  <span>PERSONAL</span>
 </a>
 
-<a href="https://www.instagram.com/techy_pad/" target="_blank" class="card offset1">
-  TECHYPAD_IG <span>BRAND</span>
+<a href="https://www.instagram.com/techy_pad/" target="_blank" class="link">
+  <div class="left">
+    <svg viewBox="0 0 24 24"><path d="M12 5a7 7 0 100 14 7 7 0 000-14z"/></svg>
+    TECHYPAD IG
+  </div>
+  <span>BRAND</span>
 </a>
 
-<a href="https://x.com/techy_pad" target="_blank" class="card offset2">
-  X / TWITTER <span>UPDATES</span>
+<a href="https://x.com/techy_pad" target="_blank" class="link">
+  <div class="left">
+    <!-- X -->
+    <svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"/></svg>
+    X (TWITTER)
+  </div>
+  <span>UPDATES</span>
 </a>
 
-<a href="https://discord.com/invite/Q6DdEXugdn" target="_blank" class="card offset3">
-  DISCORD <span>JOIN</span>
+<a href="https://discord.com/invite/Q6DdEXugdn" target="_blank" class="link">
+  <div class="left">
+    <!-- chat -->
+    <svg viewBox="0 0 24 24"><path d="M4 4h16v12H5l-1 4V4z"/></svg>
+    DISCORD
+  </div>
+  <span>JOIN</span>
 </a>
 
-<a href="mailto:jnyananjansarkar01@gmail.com" class="card">
-  EMAIL <span>CONTACT</span>
+<a href="mailto:jnyananjansarkar01@gmail.com" class="link">
+  <div class="left">
+    <!-- mail -->
+    <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+    EMAIL
+  </div>
+  <span>CONTACT</span>
 </a>
 
-</nav>
-
-</main>
+</div>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 JANA // ALL_SYSTEMS_OPERATIONAL</p>
-
+<footer>
+  <p>© 2026 JANA</p>
   <div class="footer-links">
     <a href="https://github.com/Jnyananjan" target="_blank">GitHub</a>
     <a href="mailto:jnyananjansarkar01@gmail.com">Email</a>
   </div>
 </footer>
+
+</main>
 
 <script src="script.js"></script>
 </body>
