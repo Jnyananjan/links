@@ -1,8 +1,4 @@
-/* PAGE FIX */
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+body {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
   background: radial-gradient(circle at top, #121414, #050505);
@@ -11,25 +7,18 @@
 
 /* MAIN */
 .main {
-  flex: 1;
-  width: 100%;
-  padding-bottom: 20px; /* 👈 IMPORTANT FIX */
-}
-
-/* CONTAINER */
-.container {
   max-width: 420px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 16px 10px;
 }
 
 /* PROFILE */
 .profile {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-.avatar img {
+.avatar {
   width: 90px;
   border-radius: 50%;
   box-shadow: 0 0 25px rgba(0,219,233,0.3);
@@ -37,12 +26,13 @@
 
 .profile h1 {
   font-family: 'Newsreader';
-  font-size: 32px;
+  font-size: 30px;
+  margin: 10px 0 0;
 }
 
 .profile p {
   font-size: 11px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: #00dbe9;
 }
 
@@ -50,69 +40,63 @@
 .links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  border-radius: 12px;
+
+  padding: 18px;
+  border-radius: 16px;
 
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
 
   text-decoration: none;
   color: white;
-  backdrop-filter: blur(12px);
-
-  transition: 0.2s;
 }
 
+/* LEFT */
 .left {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 /* ICON */
 svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   stroke: #00dbe9;
   fill: none;
   stroke-width: 2;
 }
 
-/* STATUS */
-.link span {
-  font-size: 9px;
+/* RIGHT TEXT */
+.link small {
+  font-size: 11px;
   opacity: 0.6;
 }
 
-/* INTERACTION */
-.link:hover {
-  transform: translateY(-2px);
-}
-
+/* TOUCH */
 .link:active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
 /* FOOTER */
 .footer {
-  padding: 12px 15px 20px;
+  padding: 16px;
 }
 
 .footer-card {
   max-width: 420px;
   margin: auto;
-  padding: 12px;
-  border-radius: 12px;
+  padding: 14px 16px;
 
+  border-radius: 18px;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
 
   display: flex;
   justify-content: space-between;
@@ -123,27 +107,24 @@ svg {
 .footer-left {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 9px;
+  gap: 8px;
+  font-size: 12px;
 }
 
-/* DOT */
 .dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background: #00ff88;
   border-radius: 50%;
-  box-shadow: 0 0 6px #00ff88;
 }
 
 /* RIGHT */
 .footer-right {
   display: flex;
-  gap: 10px;
+  gap: 16px;
 }
 
-.footer-right a {
-  color: #00dbe9;
-  text-decoration: none;
-  font-size: 10px;
+.footer-right svg {
+  width: 22px;
+  height: 22px;
 }
