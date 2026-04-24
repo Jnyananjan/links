@@ -1,6 +1,6 @@
 # ⚡ JNYANANJAN // Link Interface
 
-> A futuristic, mobile-first portfolio designed as a **system interface**, not a website.
+> A futuristic, Links Hub designed as a **system interface**, not a website. **Made with AI by Me.**
 
 ---
 
